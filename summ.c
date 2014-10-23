@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 	int f1, f2, f3, f4, f5, f6;
 	FILE *fp;
 
-	if (argc < 2) {
+	if (argc > 2) {
 		printf("\nНеправильно введен аргумент = %d\n", argc);
 		return 3;
 	}
