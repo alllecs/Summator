@@ -9,16 +9,16 @@ int main(int argc, char *argv[])
 	fp = fopen(argv[1], "r");
 
 	if (fp == NULL ) {
-                perror("fopen");
+                perror("error fopen");
 		return 2;
 	}
 	fscanf(fp, "%d %d %d %d %d %d", &f1, &f2, &f3, &f4, &f5, &f6);
 
 	fclose(fp);
 
-	printf("%.2d\n", f1 + f2);
-        printf("%.2d\n", f3 + f4);
-        printf("%.2d\n", f5 + f6);
+	printf("%.d\n", f1 + f2);
+        printf("%.d\n", f3 + f4);
+        printf("%.d\n", f5 + f6);
 
 	return 0;
 }
