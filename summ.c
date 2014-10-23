@@ -6,8 +6,9 @@ int main(int argc, char *argv[])
 	int f1, f2, f3, f4, f5, f6;
 	FILE *fp;
 
-	(void) argc;
-
+	if (argc < 2) {
+		printf("\nНеправильно введен аргумент%d\n", argc);
+	}
 	fp = fopen(argv[1], "r");
 
 	if (fp == NULL ) {
