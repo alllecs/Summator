@@ -19,6 +19,10 @@ int main(int argc, char *argv[])
 
 	while (!feof(fp)) {
 		fscanf(fp,"%d %d", &f1, &f2);
+		if (f1 > 999 || f1 < -999) {
+			printf("\nБинарный код\n");
+			return 0;
+		}
 		printf("%.d\n", c = f1 + f2);
 	}
 
