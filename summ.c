@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 	FILE *fp;
 
 	if (argc != 2) {
-		printf("Ошибка аргумента\n");
+		printf("Неправильно указан аргумент\n");
 		return 3;
 	}
 
