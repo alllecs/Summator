@@ -12,13 +12,13 @@ int main(int argc, char *argv[])
 	}
 
 	fp = fopen(argv[1], "r");
-	if (fp == NULL ) {
+	if (fp == NULL) {
 		perror("error fopen");
 		return 2;
 	}
 
 	while (!feof(fp)) {
-		fscanf(fp,"%d %d", &f1, &f2);
+		fscanf(fp, "%d %d", &f1, &f2);
 		c = f1 + f2;
 		printf("%d\n", c);
 	}
