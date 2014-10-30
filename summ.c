@@ -19,6 +19,11 @@ int main(int argc, char *argv[])
 
 	while (!feof(fp)) {
 		fscanf(fp, "%d %d", &f1, &f2);
+		if (fscanf(fp, "%d %d", &f1, &f2) != 2) {
+			printf("Ошибка чтения файла\n");
+			return 4;
+		}
+
 		c = f1 + f2;
 		printf("%d\n", c);
 	}
