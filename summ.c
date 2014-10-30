@@ -6,8 +6,8 @@ int main(int argc, char *argv[])
 	int f1, f2, c, n;
 	FILE *fp;
 
-	if (argc > 2) {
-		printf("Указано больше одного аргумента. В строке - %d\n", argc);
+	if (argc != 2) {
+		printf("Ошибка аргумента\n");
 		return 3;
 	}
 
