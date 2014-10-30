@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-	int f1, f2, c, n;
+	int f1, f2, c, n, errno;
 	FILE *fp;
 
 	if (argc != 2) {
@@ -18,7 +18,12 @@ int main(int argc, char *argv[])
 	}
 
 	while (!feof(fp)) {
+		errno = 0;
 		n = fscanf(fp, "%d %d", &f1, &f2);
+		if (n == EOF || errno != 0) {
+			break;
+		}
+		else
 		if (n != 2) {
 			printf("Ошибка чтения файла\n");
 			return 4;
