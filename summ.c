@@ -7,13 +7,13 @@ int main(int argc, char *argv[])
 	FILE *fp;
 
 	if (argc > 2) {
-		printf("\nНеправильно введен аргумент = %d\n", argc);
+		printf("Указано больше одного аргумента. В строке - %d\n", argc);
 		return 3;
 	}
 
 	fp = fopen(argv[1], "r");
 	if (fp == NULL) {
-		perror("error fopen");
+		perror("Ошибка при работе с файлом");
 		return 2;
 	}
 
