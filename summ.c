@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 	int ferror(FILE *fp);
 
 	if (argc != 2) {
-		printf("Неправильно указан аргумент\n");
+		printf("Отсутствует или указано больше 1 аргумента\n");
 		return 3;
 	}
 
