@@ -3,8 +3,9 @@
 
 int main(int argc, char *argv[])
 {
-	int f1, f2, c, n, errno;
+	int f1, f2, c, n;
 	FILE *fp;
+	int ferror(FILE *fp);
 
 	if (argc != 2) {
 		printf("Неправильно указан аргумент\n");
@@ -18,9 +19,8 @@ int main(int argc, char *argv[])
 	}
 
 	while (!feof(fp)) {
-		errno = 0;
 		n = fscanf(fp, "%d %d", &f1, &f2);
-		if (n == EOF || errno != 0) {
+		if (n == EOF || ferror(fp)) {
 			break;
 		}
 		else
