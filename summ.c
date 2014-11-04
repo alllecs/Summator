@@ -5,7 +5,6 @@ int main(int argc, char *argv[])
 {
 	int f1, f2, c, n;
 	FILE *fp;
-	int ferror(FILE *fp);
 
 	if (argc != 2) {
 		printf("Отсутствует или указано больше 1 аргумента\n");
