@@ -7,7 +7,8 @@ int main(int argc, char *argv[])
 	FILE *fp;
 
 	if (argc != 2) {
-		printf("Отсутствует или указано больше 1 аргумента\n");
+		printf
+		    ("Отсутствует или указано больше 1 аргумента\n");
 		return 3;
 	}
 
@@ -19,11 +20,10 @@ int main(int argc, char *argv[])
 
 	while (!feof(fp)) {
 		n = fscanf(fp, "%d %d", &f1, &f2);
-		if (n == EOF || ferror(fp)) {
+		if (n == EOF) {
 			break;
 		}
-		else
-		if (n != 2) {
+		if (n != 2 || ferror(fp)) {
 			printf("Ошибка чтения файла\n");
 			return 4;
 		}
