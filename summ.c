@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-	int f1, f2, c, n;
+	int f1, f2, n;
 	FILE *fp;
 
 	if (argc != 2) {
@@ -28,8 +28,7 @@ int main(int argc, char *argv[])
 			return 4;
 		}
 
-		c = f1 + f2;
-		printf("%d\n", c);
+		printf("%d\n", f1 + f2);
 	}
 
 	fclose(fp);
