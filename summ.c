@@ -3,7 +3,6 @@
 
 int main(int argc, char *argv[])
 {
-	int f1, f2, n;
 	FILE *fp;
 
 	if (argc != 2) {
@@ -19,6 +18,8 @@ int main(int argc, char *argv[])
 	}
 
 	while (!feof(fp)) {
+		int f1, f2, n;
+
 		n = fscanf(fp, "%d %d", &f1, &f2);
 		if (n == EOF) {
 			break;
@@ -32,5 +33,6 @@ int main(int argc, char *argv[])
 	}
 
 	fclose(fp);
+
 	return 0;
 }
